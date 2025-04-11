@@ -2,25 +2,25 @@
 #define lista_wiazana
 #include <iostream>
 struct Node {
-    int data; //wartoúÊ
-    Node* next; //wskaünik do nastÍpnego elementu
+    int data; //warto≈õƒá
+    Node* next; //wska≈∫nik do nastƒôpnego elementu
     Node(int value);  //konstruktor
 };
 class ListaWiazana
 {
 private:
-    Node* head; //wskaünik do pierwszego elementu
-    Node* tail; //wskaünik do ostatniego elementu
+    Node* head; //wska≈∫nik do pierwszego elementu
+    Node* tail; //wska≈∫nik do ostatniego elementu
 public:
     ListaWiazana(); //konstruktor
     ~ListaWiazana(); //dekonstruktor
-    void addFirst(int value); //dodawanie na poczπtek
+    void addFirst(int value); //dodawanie na poczƒÖtek
     void addLast(int value); //dodawanie na koniec
     void addAtIndex(int index, int value); //dodawanie na wskazany indeks
     void deleteAtIndex(int index); //usuwanie z wskazanego indeksu
-    void deleteFirst(); //usuwanie z poczπtku
-    void deleteLast(); //usuwanie z koÒca
+    void deleteFirst(); //usuwanie z poczƒÖtku
+    void deleteLast(); //usuwanie z ko≈Ñca
     void show(); //pokazywanie tablicy
-    void search(int value); //szukanie wartoúci
+    void search(int value); //szukanie warto≈õci
 };
 #endif
