@@ -11,14 +11,14 @@ private:
 public:
     ListaDynamiczna(int n); //konstruktor
     ~ListaDynamiczna(); //dekonstruktor
-    void addFirst(int value); //dodawanie na pocz¹tek
+    void addFirst(int value); //dodawanie na poczÄ…tek
     void addLast(int value); //dodawanie na koniec
     void addAtIndex(int index, int value); //dodawanie na wskazany indeks
     void deleteAtIndex(int index); //usuwanie z wskazanego indeksu
-    void deleteFirst(); //usuwanie z pocz¹tku
-    void deleteLast(); //usuwanie z koñca
+    void deleteFirst(); //usuwanie z poczÄ…tku
+    void deleteLast(); //usuwanie z koÅ„ca
     void show(); //pokazywanie tablicy
-    void search(int value); //szukanie wartoœci
+    void search(int value); //szukanie wartoÅ›ci
     void showAtIndex(int index); //pokazywanie elementu na wskazanym indeksie
 };
 #endif
