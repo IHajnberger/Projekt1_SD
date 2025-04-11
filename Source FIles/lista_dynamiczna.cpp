@@ -10,23 +10,23 @@ ListaDynamiczna::ListaDynamiczna(int n)
 }
 ListaDynamiczna::~ListaDynamiczna()
 {
-    delete[] data;  //zwalnianie pamiêci
+    delete[] data;  //zwalnianie pamiÄ™ci
 }
 void ListaDynamiczna::resize()
 {
-    capacity = capacity * 2;  //dwukrotne powiêkszenie rozmiaru tabliicy
+    capacity = capacity * 2;  //dwukrotne powiÄ™kszenie rozmiaru tabliicy
 }
 void ListaDynamiczna::addFirst(int value)
 {
-    if (size == capacity)  //poszerzanie tablicy, gdy jest pe³na
+    if (size == capacity)  //poszerzanie tablicy, gdy jest peÅ‚na
     {
         resize();
     }
-    for (int i = size; i > 0; i--) //przemieszczanie wszystkich elementów o jeden w prawo
+    for (int i = size; i > 0; i--) //przemieszczanie wszystkich elementÃ³w o jeden w prawo
     {
         data[i] = data[i - 1];
     }
-    data[0] = value;  //ustawianie pierwszego elementu na now¹ wartoœæ
+    data[0] = value;  //ustawianie pierwszego elementu na nowÄ… wartoÅ›Ä‡
     size++;
 }
 void ListaDynamiczna::addLast(int value)
@@ -35,7 +35,7 @@ void ListaDynamiczna::addLast(int value)
     {
         resize();
     }
-    data[size] = value;  //dodawanie nowej wartoœci na koniec tablicy
+    data[size] = value;  //dodawanie nowej wartoÅ›ci na koniec tablicy
     size++;
 }
 void ListaDynamiczna::addAtIndex(int index, int value)
@@ -63,7 +63,7 @@ void ListaDynamiczna::deleteAtIndex(int index)
         cout << "Indeks poza zakresem" << endl;
         return;
     }
-    for (int i = index; i < size - 1; i++)      //przemieszczanie wszystkich elementów o jeden w lewo
+    for (int i = index; i < size - 1; i++)      //przemieszczanie wszystkich elementÃ³w o jeden w lewo
     {
         data[i] = data[i + 1];
     }
@@ -78,7 +78,7 @@ void ListaDynamiczna::deleteFirst()
     }
     for (int i = 0; i < size - 1; i++)
     {
-        data[i] = data[i + 1];      //przemieszczanie wszystkich elementów o jeden w lewo
+        data[i] = data[i + 1];      //przemieszczanie wszystkich elementÃ³w o jeden w lewo
     }
     size--;
 }
