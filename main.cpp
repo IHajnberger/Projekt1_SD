@@ -40,7 +40,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Dynamiczna addFirst: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addFirst (Dynamiczna)" << endl;
+    cout << "Zakonczono test addFirst (Dynamiczna)" << endl;
 
     // addFirst - ListaWiazana
     time = 0;
@@ -53,7 +53,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Wiazana addFirst: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addFirst (Wiazana)" << endl;
+    cout << "Zakonczono test addFirst (Wiazana)" << endl;
 
     // addLast - ListaDynamiczna
     time = 0;
@@ -66,7 +66,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Dynamiczna addLast: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addLast (Dynamiczna)" << endl;
+    cout << "Zakonczono test addLast (Dynamiczna)" << endl;
 
     // addLast - ListaWiazana
     time = 0;
@@ -79,7 +79,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Wiazana addLast: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addLast (Wiazana)" << endl;
+    cout << "Zakonczono test addLast (Wiazana)" << endl;
 
     // addAtIndex - ListaDynamiczna
     time = 0;
@@ -92,7 +92,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Dynamiczna addAtIndex: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addAtIndex (Dynamiczna)" << endl;
+    cout << "Zakonczono test addAtIndex (Dynamiczna)" << endl;
 
     // addAtIndex - ListaWiazana
     time = 0;
@@ -105,7 +105,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Wiazana addAtIndex: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test addAtIndex (Wiazana)" << endl;
+    cout << "Zakonczono test addAtIndex (Wiazana)" << endl;
 
     // deleteFirst - ListaDynamiczna
     time = 0;
@@ -118,7 +118,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Dynamiczna deleteFirst: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test deleteFirst (Dynamiczna)" << endl;
+    cout << "Zakonczono test deleteFirst (Dynamiczna)" << endl;
 
     // deleteFirst - ListaWiazana
     time = 0;
@@ -131,7 +131,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Wiazana deleteFirst: " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test deleteFirst (Wiazana)" << endl;
+    cout << "Zakonczono test deleteFirst (Wiazana)" << endl;
 
     // search - ListaDynamiczna
     time = 0;
@@ -144,7 +144,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Dynamiczna search (90): " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test search dla liczby 90 (Dynamiczna)" << endl;
+    cout << "Zakonczono test search dla liczby 90 (Dynamiczna)" << endl;
 
     // search - ListaWiazana
     time = 0;
@@ -157,7 +157,7 @@ int main()
         time += duration_cast<nanoseconds>(stop - start).count();
     }
     outputFile << "Wiazana search (90): " << time / rep << " nanosekund" << endl;
-    cout << "Zakończono test search dla liczby 90 (Wiazana)" << endl;
+    cout << "Zakonczono test search dla liczby 90 (Wiazana)" << endl;
     return 0;
     outputFile.close(); // Zamknięcie plikua
 }
