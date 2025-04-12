@@ -1,5 +1,5 @@
 # Projekt 1 - Struktury danych
-Implementacja listy wiązanej oraz tablicy dynamicznej w celu zbadania różnicy pomiędzy nimi.
+Implementacja listy wiązanej (jednokierunkowej) oraz tablicy dynamicznej w celu zbadania różnicy pomiędzy nimi.
 
 [Sprawozdanie](https://www.overleaf.com/7376841544jzyyygsjcdcr#164641)
 
