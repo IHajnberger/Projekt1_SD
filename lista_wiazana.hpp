@@ -1,17 +1,17 @@
 #ifndef lista_wiazana
 #define lista_wiazana
 #include <iostream>
-struct Node{
-    int data; //wartość
+struct Node { // struktura elementu
+    int data; //wartość elementu
     Node* next; //wskaźnik do następnego elementu
-    Node(int value);  //konstruktor
+    Node(int value);  //konstruktor 
 };
-class ListaWiazana
+class ListaWiazana // jednokierunkowa
 {
 private:
     Node* head; //wskaźnik do pierwszego elementu
     Node* tail; //wskaźnik do ostatniego elementu
-    int count;
+	int count; //liczba elementów w liście
 public:
    ListaWiazana(); //konstruktor
     ~ListaWiazana(); //dekonstruktor
