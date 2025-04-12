@@ -1,16 +1,16 @@
-#ifndef lista_dynamiczna
-#define lista_dynamiczna
+#ifndef tablica_dynamiczna
+#define tablica_dynamiczna
 #include <iostream>
 
-class ListaDynamiczna {
+class TablicaDynamiczna {
 private:
     int* data;
     int size;
     int capacity;
     void resize(); //zmiana rozmiaru tablicy
 public:
-    ListaDynamiczna(int n); //konstruktor
-    ~ListaDynamiczna(); //dekonstruktor
+    TablicaDynamiczna(int n); //konstruktor
+    ~TablicaDynamiczna(); //dekonstruktor
     void addFirst(int value); //dodawanie na początek
     void addLast(int value); //dodawanie na koniec
     void addAtIndex(int index, int value); //dodawanie na wskazany indeks
