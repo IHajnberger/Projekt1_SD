@@ -109,11 +109,11 @@ void TablicaDynamiczna::search(int value)
     {
         if (data[i] == value)
         {
-            cout << "Znaleziono wartosc: " << value << " na indeksie: " << i << endl;
+           // cout << "Znaleziono wartosc: " << value << " na indeksie: " << i << endl;
             return;
         }
     }
-    cout << "Nie znaleziono wartosci: " << value << endl;
+   // cout << "Nie znaleziono wartosci: " << value << endl;
 }
 void TablicaDynamiczna::showAtIndex(int index)
 {
