@@ -12,13 +12,13 @@ TablicaDynamiczna::~TablicaDynamiczna()
 {
     delete[] data;  //zwalnianie pamięci
 }
-void TablicaDynamiczna::resize() {
-    int new_capacity = capacity * 2;
-    int* new_data = new int[new_capacity];
+void TablicaDynamiczna::resize() { //zmiana rozmiaru tablicy
+	int new_capacity = capacity * 2; // Podwajanie pojemności
+	int* new_data = new int[new_capacity]; //Alokacja nowej pamięci
     std::copy(data, data + size, new_data); // Kopiowanie elementów
-    delete[] data;
-    data = new_data;
-    capacity = new_capacity;
+	delete[] data; // Zwolnienie starej pamięci
+	data = new_data; // Przypisanie nowej pamięci
+	capacity = new_capacity; // Zmiana pojemności
 }
 void TablicaDynamiczna::addFirst(int value)
 {
