@@ -17,17 +17,17 @@ int main()
     }
 
     long long time = 0;
-    int size = 100;  // liczba elementów w liście
+    int size = 1000000;  // liczba elementów w liście
     TablicaDynamiczna Dynamic(size);   // inicjalizacja listy dynamicznej
     ListaWiazana Linked;             // inicjalizacja listy wiązanej
     int rep = 100;  // liczba powtórzeń
-
     // Zapełnianie listy dynamicznej do zamierzanej wielkości
     for (int i = 0; i < size; i++) 
     { 
         Dynamic.addLast(i); 
         Linked.addLast(i);
     }
+   
 
     // addFirst - ListaDynamiczna
     time = 0;
@@ -132,6 +132,57 @@ int main()
     }
     outputFile << "Wiazana deleteFirst: " << time / rep << " nanosekund" << endl;
     cout << "Zakonczono test deleteFirst (Wiazana)" << endl;
+    // deleteLast - ListaDynamiczna
+    time = 0;
+    cout << "Rozpoczynam test deleteLast (Dynamiczna)" << endl;
+    for (int i = 0; i < rep; i++) 
+    {
+        auto start = high_resolution_clock::now();
+        Dynamic.deleteLast();
+        auto stop = high_resolution_clock::now();
+        time += duration_cast<nanoseconds>(stop - start).count();
+    }
+    outputFile << "Dynamiczna deleteLast: " << time / rep << " nanosekund" << endl;
+    cout << "Zakonczono test deleteLast (Dynamiczna)" << endl;
+
+    // deleteLast - ListaWiazana
+    time = 0;
+    cout << "Rozpoczynam test deleteLast (Wiazana)" << endl;
+    for (int i = 0; i < rep; i++) 
+    {
+        auto start = high_resolution_clock::now();
+        Linked.deleteLast();
+        auto stop = high_resolution_clock::now();
+        time += duration_cast<nanoseconds>(stop - start).count();
+    }
+    outputFile << "Wiazana deleteLast: " << time / rep << " nanosekund" << endl;
+    cout << "Zakonczono test deleteLast (Wiazana)" << endl;
+    
+    // deleteAtIndex - ListaDynamiczna
+    time = 0;
+    cout << "Rozpoczynam test deleteAtIndex (Dynamiczna)" << endl;
+    for (int i = 0; i < rep; i++) 
+    {
+        auto start = high_resolution_clock::now();
+        Dynamic.deleteAtIndex(size / 2);
+        auto stop = high_resolution_clock::now();
+        time += duration_cast<nanoseconds>(stop - start).count();
+    }
+    outputFile << "Dynamiczna deleteAtIndex: " << time / rep << " nanosekund" << endl;
+    cout << "Zakonczono test deleteAtIndex (Dynamiczna)" << endl;
+    
+    // deleteAtIndex - ListaWiazana
+    time = 0;
+    cout << "Rozpoczynam test deleteAtIndex (Wiazana)" << endl;
+    for (int i = 0; i < rep; i++) 
+    {
+        auto start = high_resolution_clock::now();
+        Linked.deleteAtIndex(size / 2);
+        auto stop = high_resolution_clock::now();
+        time += duration_cast<nanoseconds>(stop - start).count();
+    }
+    outputFile << "Wiazana deleteAtIndex: " << time / rep << " nanosekund" << endl;
+    cout << "Zakonczono test deleteAtIndex (Wiazana)" << endl;
 
     // search - ListaDynamiczna
     time = 0;
@@ -159,5 +210,5 @@ int main()
     outputFile << "Wiazana search (90): " << time / rep << " nanosekund" << endl;
     cout << "Zakonczono test search dla liczby 90 (Wiazana)" << endl;
     return 0;
-    outputFile.close(); // Zamknięcie plikua
+    outputFile.close(); // Zamknięcie pliku
 }
