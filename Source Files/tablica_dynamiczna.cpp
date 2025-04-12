@@ -1,22 +1,22 @@
-#include "lista_dynamiczna.hpp"
+#include "tablica_dynamiczna.hpp"
 #include <iostream>
 
 using namespace std;
-ListaDynamiczna::ListaDynamiczna(int n)
+TablicaDynamiczna::TablicaDynamiczna(int n)
 {
     data = new int[n];
     size = 0;
     capacity = n;
 }
-ListaDynamiczna::~ListaDynamiczna()
+TablicaDynamiczna::~TablicaDynamiczna()
 {
     delete[] data;  //zwalnianie pamięci
 }
-void ListaDynamiczna::resize()
+void TablicaDynamiczna::resize()
 {
     capacity = capacity * 2;  //dwukrotne powiększenie rozmiaru tabliicy
 }
-void ListaDynamiczna::addFirst(int value)
+void TablicaDynamiczna::addFirst(int value)
 {
     if (size == capacity)  //poszerzanie tablicy, gdy jest pełna
     {
@@ -29,7 +29,7 @@ void ListaDynamiczna::addFirst(int value)
     data[0] = value;  //ustawianie pierwszego elementu na nową wartość
     size++;
 }
-void ListaDynamiczna::addLast(int value)
+void TablicaDynamiczna::addLast(int value)
 {
     if (size == capacity)
     {
@@ -38,7 +38,7 @@ void ListaDynamiczna::addLast(int value)
     data[size] = value;  //dodawanie nowej wartości na koniec tablicy
     size++;
 }
-void ListaDynamiczna::addAtIndex(int index, int value)
+void TablicaDynamiczna::addAtIndex(int index, int value)
 {
     if (index < 0 || index > size)  //sprawdzenie czy index nie wykracza poza zakres tablicy
     {
@@ -56,7 +56,7 @@ void ListaDynamiczna::addAtIndex(int index, int value)
     data[index] = value;
     size++;
 }
-void ListaDynamiczna::deleteAtIndex(int index)
+void TablicaDynamiczna::deleteAtIndex(int index)
 {
     if (index < 0 || index >= size)
     {
@@ -69,7 +69,7 @@ void ListaDynamiczna::deleteAtIndex(int index)
     }
     size--;
 }
-void ListaDynamiczna::deleteFirst()
+void TablicaDynamiczna::deleteFirst()
 {
     if (size == 0)      //sprawdzenie czy tablica nie jest pusta
     {
@@ -82,7 +82,7 @@ void ListaDynamiczna::deleteFirst()
     }
     size--;
 }
-void ListaDynamiczna::deleteLast()
+void TablicaDynamiczna::deleteLast()
 {
     if (size == 0)
     {
@@ -91,7 +91,7 @@ void ListaDynamiczna::deleteLast()
     }
     size--;
 }
-void ListaDynamiczna::show()
+void TablicaDynamiczna::show()
 {
     for (int i = 0; i < size; i++)
     {
@@ -99,7 +99,7 @@ void ListaDynamiczna::show()
     }
     cout << endl;
 }
-void ListaDynamiczna::search(int value)
+void TablicaDynamiczna::search(int value)
 {
     for (int i = 0; i < size; i++)
     {
@@ -111,7 +111,7 @@ void ListaDynamiczna::search(int value)
     }
     cout << "Nie znaleziono wartosci: " << value << endl;
 }
-void ListaDynamiczna::showAtIndex(int index)
+void TablicaDynamiczna::showAtIndex(int index)
 {
     if (index < 0 || index >= size)
     {
