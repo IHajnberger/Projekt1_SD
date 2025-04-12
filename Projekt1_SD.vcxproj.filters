@@ -21,7 +21,7 @@
     <ClCompile Include="lista_wiazana.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lista_dynamiczna.cpp">
+    <ClCompile Include="tablica_dynamiczna.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,7 @@
     <ClInclude Include="lista_wiazana.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lista_dynamiczna.hpp">
+    <ClInclude Include="tablica_dynamiczna.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
