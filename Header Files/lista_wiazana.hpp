@@ -1,7 +1,7 @@
 #ifndef lista_wiazana
 #define lista_wiazana
 #include <iostream>
-struct Node {
+struct Node{
     int data; //wartość
     Node* next; //wskaźnik do następnego elementu
     Node(int value);  //konstruktor
@@ -11,9 +11,11 @@ class ListaWiazana
 private:
     Node* head; //wskaźnik do pierwszego elementu
     Node* tail; //wskaźnik do ostatniego elementu
+    int count;
 public:
-    ListaWiazana(); //konstruktor
+   ListaWiazana(); //konstruktor
     ~ListaWiazana(); //dekonstruktor
+    bool isEmpty(); //sprawdzenie czy lista jest pusta
     void addFirst(int value); //dodawanie na początek
     void addLast(int value); //dodawanie na koniec
     void addAtIndex(int index, int value); //dodawanie na wskazany indeks
