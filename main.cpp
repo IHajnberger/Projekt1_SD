@@ -19,7 +19,7 @@ int main()
     long long time = 0;
     int size = 1000000;  // liczba elementów w liście
     TablicaDynamiczna Dynamic(size);   // inicjalizacja listy dynamicznej
-    ListaWiazana Linked;             // inicjalizacja listy wiązanej
+    ListaWiazana Linked;            // inicjalizacja listy wiązanej
     int rep = 100;  // liczba powtórzeń
     // Zapełnianie listy dynamicznej do zamierzanej wielkości
     for (int i = 0; i < size; i++) 

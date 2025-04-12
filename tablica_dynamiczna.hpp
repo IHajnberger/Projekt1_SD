@@ -2,11 +2,11 @@
 #define tablica_dynamiczna
 #include <iostream>
 
-class TablicaDynamiczna {
+class TablicaDynamiczna { //tablica dynamiczna
 private:
-    int* data;
+	int* data; //wskaźnik do tablicy
     int size;
-    int capacity;
+	int capacity; //rozmiar tablicy
     void resize(); //zmiana rozmiaru tablicy
 public:
     TablicaDynamiczna(int n); //konstruktor

@@ -2,13 +2,13 @@
 #include <iostream>
 
 using namespace std;
-TablicaDynamiczna::TablicaDynamiczna(int n)
+TablicaDynamiczna::TablicaDynamiczna(int n) //konstruktor
 {
     data = new int[n];
     size = 0;
     capacity = n;
 }
-TablicaDynamiczna::~TablicaDynamiczna()
+TablicaDynamiczna::~TablicaDynamiczna() //destruktor
 {
     delete[] data;  //zwalnianie pamięci
 }
@@ -33,7 +33,7 @@ void TablicaDynamiczna::addFirst(int value)
     data[0] = value;  //ustawianie pierwszego elementu na nową wartość
     size++;
 }
-void TablicaDynamiczna::addLast(int value)
+void TablicaDynamiczna::addLast(int value) //dodawanie na koniec
 {
     if (size == capacity)
     {
@@ -60,7 +60,7 @@ void TablicaDynamiczna::addAtIndex(int index, int value)
     data[index] = value;
     size++;
 }
-void TablicaDynamiczna::deleteAtIndex(int index)
+void TablicaDynamiczna::deleteAtIndex(int index) //usuwanie z wskazanego indeksu
 {
     if (index < 0 || index >= size)
     {
@@ -73,7 +73,7 @@ void TablicaDynamiczna::deleteAtIndex(int index)
     }
     size--;
 }
-void TablicaDynamiczna::deleteFirst()
+void TablicaDynamiczna::deleteFirst() //usuwanie z początku
 {
     if (size == 0)      //sprawdzenie czy tablica nie jest pusta
     {
@@ -86,7 +86,7 @@ void TablicaDynamiczna::deleteFirst()
     }
     size--;
 }
-void TablicaDynamiczna::deleteLast()
+void TablicaDynamiczna::deleteLast() //usuwanie z końca
 {
     if (size == 0)
     {
@@ -95,7 +95,7 @@ void TablicaDynamiczna::deleteLast()
     }
     size--;
 }
-void TablicaDynamiczna::show()
+void TablicaDynamiczna::show()  //pokazywanie tablicy
 {
     for (int i = 0; i < size; i++)
     {
@@ -103,7 +103,7 @@ void TablicaDynamiczna::show()
     }
     cout << endl;
 }
-void TablicaDynamiczna::search(int value)
+void TablicaDynamiczna::search(int value) //szukanie wartości
 {
     for (int i = 0; i < size; i++)
     {
@@ -115,7 +115,7 @@ void TablicaDynamiczna::search(int value)
     }
    // cout << "Nie znaleziono wartosci: " << value << endl;
 }
-void TablicaDynamiczna::showAtIndex(int index)
+void TablicaDynamiczna::showAtIndex(int index) //pokazywanie elementu na wskazanym indeksie
 {
     if (index < 0 || index >= size)
     {
