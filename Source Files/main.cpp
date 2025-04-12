@@ -1,31 +1,31 @@
 #include <iostream>
-#include "lista_dynamiczna.hpp"
+#include "tablica_dynamiczna.hpp"
 #include "lista_wiazana.hpp"
 using namespace std;
 
 int main()
 {
-    ListaDynamiczna lista(2);
-    lista.addLast(4000);
-    lista.addLast(20);
-    lista.addLast(30);
-    lista.addLast(40);
-    lista.show();
-    lista.addFirst(5);
-    lista.show();
-    lista.addAtIndex(2, 15);
-    lista.show();
-    lista.deleteAtIndex(3);
+    TablicaDynamiczna tablicaD(2);
+    tablicaD.addLast(4000);
+    tablicaD.addLast(20);
+    tablicaD.addLast(30);
+    tablicaD.addLast(40);
+    tablicaD.show();
+    tablicaD.addFirst(5);
+    tablicaD.show();
+    tablicaD.addAtIndex(2, 15);
+    tablicaD.show();
+    tablicaD.deleteAtIndex(3);
     cout << "Zawartosc listy dynamicznej po usunieciu elementu z indeksu 3: ";
-    lista.show();
-    lista.deleteFirst();
+    tablicaD.show();
+    tablicaD.deleteFirst();
     cout << "Zawartosc listy dynamicznej po usunieciu pierwszego elementu: ";
-    lista.show();
-    lista.deleteLast();
+    tablicaD.show();
+    tablicaD.deleteLast();
     cout << "Zawartosc listy dynamicznej po usunieciu ostatniego elementu: ";
-    lista.show();
-    lista.showAtIndex(1);
-    lista.search(15);
-    lista.search(100);
+    tablicaD.show();
+    tablicaD.showAtIndex(1);
+    tablicaD.search(15);
+    tablicaD.search(100);
     return 0;
 }
