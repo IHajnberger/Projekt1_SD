@@ -1,0 +1,14 @@
+Dynamiczna addFirst: 1033586 nanosekund
+Wiazana addFirst: 72 nanosekund
+Dynamiczna addLast: 35 nanosekund
+Wiazana addLast: 55 nanosekund
+Dynamiczna addAtIndex: 556865 nanosekund
+Wiazana addAtIndex: 1158211 nanosekund
+Dynamiczna deleteFirst: 1211435 nanosekund
+Wiazana deleteFirst: 59 nanosekund
+Dynamiczna deleteLast: 31 nanosekund
+Wiazana deleteLast: 2243803 nanosekund
+Dynamiczna deleteAtIndex: 612567 nanosekund
+Wiazana deleteAtIndex: 1139667 nanosekund
+Dynamiczna search (90): 92 nanosekund
+Wiazana search (90): 175 nanosekund
