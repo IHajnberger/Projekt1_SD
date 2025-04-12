@@ -186,11 +186,11 @@ void ListaWiazana::search(int value) // szukanie wartości
      { 
         if (current->data == value)    //sprawdzamy czy aktualny element to szukana wartość
         {
-            cout << "Znaleziono element o wartości " << value << " na indeksie " << index << "." << endl;
+            //cout << "Znaleziono element o wartosci " << value << " na indeksie " << index << "." << endl;
             return;
         }
         current = current->next; 
         index++;
     }
-    cout << "Nie znaleziono elementu o wartości " << value << "." << endl;
+   // cout << "Nie znaleziono elementu o wartości " << value << "." << endl;
 }
